@@ -1,0 +1,28 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 5fr;
+  background-color: bisque;
+  gap: 5px;
+
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main";
+}
+
+.container > * {
+  background-color: white;
+}
+
+.sidebar {
+  grid-area: sidebar;
+}
+
+.header {
+  grid-area: header;
+}
+
+.main-content {
+  grid-area: main;
+}
