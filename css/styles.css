@@ -95,7 +95,7 @@ li > img {
   background-color: white;
   grid-area: 1/2/2/3;
   z-index: 20;
-  box-shadow: 0 5px 2px -2px gray;
+  box-shadow: 0 5px 20px -3px lightgray;
   padding: 1rem 3rem;
   display: grid;
   grid-template-rows: 75px 100px;
@@ -206,6 +206,7 @@ li > img {
   grid-template-areas:
     "projects-title"
     "projects-grid";
+  gap: 0.4rem;
 }
 
 .projects-title {
@@ -264,14 +265,56 @@ li > img {
   display: grid;
   grid-template-rows: 1fr 1fr;
   row-gap: 2rem;
+  padding: 0 2rem;
+}
+
+.side-section {
+  display: grid;
+  grid-template-rows: 30px 1fr;
+  gap: 0.4rem;
+}
+
+.section-card {
+  padding: 2rem;
+  background-color: var(--card-main-color);
+  border-radius: 8px;
+}
+
+.announcement-title {
+  font-size: 1rem;
+}
+
+.announcement-text {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.announce-separator {
+  width: 100%;
+  height: 2px;
+  background-color: lightgray;
+  border-radius: 2px;
 }
 
 .announcements {
   display: grid;
-  grid-template-rows: 30px 1fr;
+  grid-auto-columns: 1fr;
+  gap: 10px;
 }
 
 .trending {
   display: grid;
-  grid-template-rows: 30px 1fr;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.trending-entry-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.trending-entry {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 1rem;
 }
